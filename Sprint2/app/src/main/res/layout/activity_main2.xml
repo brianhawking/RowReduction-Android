@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity2">
+
+
+    <TableLayout
+        android:id="@+id/matrixTable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20pt"
+        android:layout_marginBottom="20pt">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/coefficientX1"
+                style="@style/Coefficient"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/coefficientY1"
+                style="@style/Coefficient"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/coefficientZ1"
+                style="@style/Coefficient"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/coefficientC1"
+                style="@style/Coefficient"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="?android:attr/listDivider" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientX2"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientY2"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientZ2"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/black"
+                />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientC2"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="?android:attr/listDivider" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/black" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientX3"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientY3"
+                android:textSize="24sp" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientZ3"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/row3Divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/black" />
+
+            <TextView
+                style="@style/Coefficient"
+                android:id="@+id/coefficientC3"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="?android:attr/listDivider" />
+        </TableRow>
+
+    </TableLayout>
+
+<!--    <View-->
+<!--        android:layout_width="2pt"-->
+<!--        android:layout_height="50pt"-->
+<!--        android:background="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/matrixTable3"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|center_horizontal"
+        android:padding="6dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/undoButton"
+            android:layout_width="0dp"
+            android:layout_height="25pt"
+            android:layout_weight="1"
+            android:text="Undo"
+            android:backgroundTint="@color/operationButtonColor"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/hint"
+            android:layout_width="0dp"
+            android:layout_height="25pt"
+            android:layout_weight="1"
+            android:text="Hint"
+            android:backgroundTint="@color/operationButtonColor"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/black"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/swapRows"
+            style="@style/RowOperationButton"
+            android:layout_width="match_parent"
+            android:src="@drawable/ri_swap_rj" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/multByConstant"
+            style="@style/RowOperationButton"
+            android:layout_width="match_parent"
+            android:src="@drawable/cri" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/rowPlusConstantRow"
+            style="@style/RowOperationButton"
+            android:layout_width="match_parent"
+            android:src="@drawable/ri_plus_crj" />
+
+    </LinearLayout>
+
+</LinearLayout>

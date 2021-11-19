@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hint">
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="175pt"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3">
+
+        <TextView
+            android:id="@+id/hintText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:paddingLeft="5pt"
+            android:text="Hint"
+            android:textColor="#000000"
+            android:textSize="16pt" />
+
+        <LinearLayout
+            android:id="@+id/swapRowsHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="66dp">
+
+            <ImageView
+                android:id="@+id/operation1RowI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/r1" />
+
+            <ImageView
+                android:id="@+id/doubleArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/doublearrow" />
+
+            <ImageView
+                android:id="@+id/operation1RowJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/r2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/multiplyByConstantHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/operation2Constant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-7pt"
+                android:layout_weight=".8"
+                android:gravity="center_vertical|right"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="20pt" />
+
+            <ImageView
+                android:id="@+id/operation2InitialRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/r1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:src="@drawable/right_arrow" />
+
+            <ImageView
+                android:id="@+id/operation2FinalRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/r1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowPlusConstantRowHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10pt"
+            android:orientation="horizontal"
+            android:paddingLeft="5pt">
+
+            <ImageView
+                android:id="@+id/operation3initialRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/r1" />
+
+            <TextView
+                android:id="@+id/Plus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.15"
+                android:gravity="center_vertical|right"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="16pt" />
+
+            <TextView
+                android:id="@+id/operation3Constant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:gravity="center_vertical|right"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20pt" />
+
+            <ImageView
+                android:id="@+id/operation3PivotRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/r2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:src="@drawable/right_arrow" />
+
+            <ImageView
+                android:id="@+id/operation3FinalRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/r1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/doneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check_mark"
+            android:layout_marginRight="10pt"
+            android:layout_marginLeft="10pt"
+            android:textSize="12pt"
+            android:backgroundTint="@color/operationButtonColor"
+            android:textColor="@color/white"
+            />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
