@@ -325,22 +325,28 @@ class Hint : AppCompatActivity() {
                     }
                 }
 
-                if (!(matrix.coefficientsAsRationals[i][3].equals(cZERO))) {
-                    solutions[row][1] = matrix.coefficientsAsRationals[i][3].toString()
-                }
+//                if (!(matrix.coefficientsAsRationals[i][3].equals(cZERO))) {
+//                    solutions[row][1] = matrix.coefficientsAsRationals[i][3].toString()
+//                }
+                solutions[row][1] = matrix.coefficientsAsRationals[i][3].toString()
+
 
                 for (j in row+1 until numberOfVariables) {
 
                     if (!matrix.coefficientsAsRationals[i][j].equals(cZERO)) {
-
+                        if(solutions[row][1] == "0") {
+                            solutions[row][1] = ""
+                        }
                         solutions[row][1] += "+${matrix.coefficientsAsRationals[i][j].negate()}${solutions[j][0]}"
                         solutions[row][1] = solutions[row][1].replace("+-", "-", true)
                     }
 
                     if(solutions[row][1][0] == '+') {
-                        solutions[row][1].drop(2)
+                        solutions[row][1].drop(1)
                     }
                 }
+
+
 
                 solution += "\n${solutions[row][0]} = ${solutions[row][1]}"
                 row += 1

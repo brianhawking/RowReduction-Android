@@ -32,7 +32,7 @@
             android:paddingLeft="5pt"
             android:text="Hint"
             android:textColor="#000000"
-            android:textSize="16pt" />
+            android:textSize="12pt" />
 
         <LinearLayout
             android:id="@+id/swapRowsHint"
