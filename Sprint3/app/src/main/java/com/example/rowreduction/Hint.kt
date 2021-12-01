@@ -286,7 +286,7 @@ class Hint : AppCompatActivity() {
     /* Description:
     When the matrix is row reduced, readTable() will interpret the result
      */
-    fun readTable() {
+    private fun readTable() {
 //        println("READ TABLE")
         val hintText: TextView = findViewById(R.id.hintText)
         hintText.text = ""

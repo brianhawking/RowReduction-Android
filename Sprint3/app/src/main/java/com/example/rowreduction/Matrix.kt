@@ -131,24 +131,59 @@ class Matrix {
         }
     }
 
-    fun findPivot(numberOfEquations: Int, numberOfVariables: Int) : Array<Int> {
+    fun findPivot(numberOfEquations: Int, numberOfVariables: Int, pivotRow: Int, pivotColumn: Int) : Array<Int> {
+
+        if(pivotRow == numberOfEquations || pivotColumn == numberOfVariables) {
+            return arrayOf(-1, -1)
+        }
 
         val cZERO = Rational(0,1)
+        val cONE = Rational(1,1)
 
-        for (column in 0 until numberOfVariables) {
-            // scan through rows
-            for (row in 0 until numberOfEquations) {
+        var isUnitColumn = false
+        var isZeroColumn = false
+        for(row in pivotRow until numberOfEquations) {
+            if(!this.coefficientsAsRationals[row][pivotColumn].equals(cZERO)) {
 
-                // number in column
-                val element = this.coefficientsAsRationals[row][column]
+                if (row == pivotRow) {
+                    if(!this.coefficientsAsRationals[row][pivotColumn].equals(cONE)) {
+                        // this is your pivot element
 
-                if (!element.equals(cZERO)) {
-                    return arrayOf(row,column)
+                            println("A: Found pivot element: $row, $pivotColumn")
+                        return arrayOf(row, pivotColumn)
+                        break
+                    }
+                    else {
+                        isUnitColumn = true
+                    }
                 }
+                else {
+                    println("B: Found pivot element: $pivotRow, $pivotColumn")
+                    return arrayOf(pivotRow, pivotColumn)
+                    break
+                }
+            }
+            else {
+                isZeroColumn = true
             }
         }
 
-        return arrayOf(-1,-1)
+        if (isUnitColumn && isZeroColumn) {
+            // it's actually a unit column
+                println("Don't have a pivot element in column $pivotColumn because it'a unit column")
+            return findPivot(numberOfEquations, numberOfVariables, pivotRow+1, pivotColumn+1)
+        }
+        else if(pivotColumn != numberOfVariables-1) {
+            println("Don't have a pivot element in column $pivotColumn because it'a zero column")
+            return findPivot(numberOfEquations, numberOfVariables, pivotRow, pivotColumn+1)
+        }
+        else {
+            println("can't find a pivot element")
+            return arrayOf(-1,-1)
+        }
+
+
+
 
     }
 

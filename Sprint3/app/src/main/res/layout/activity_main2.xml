@@ -189,7 +189,7 @@
             android:layout_height="25pt"
             android:layout_weight="1"
             android:text="Show Pivot"
-            android:backgroundTinct="@color/operationButtonColor"
+            android:backgroundTint="@color/operationButtonColor"
             android:textColor="@color/white"
             />
 
