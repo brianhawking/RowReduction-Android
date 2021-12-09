@@ -280,11 +280,11 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-    fun updateScreen() {
+    private fun updateScreen() {
 
         showingPivot = false
         val element: TextView = findViewById(equationIDs[pivotElement[0]][pivotElement[1]])
-        element.setBackgroundResource(Color.TRANSPARENT)
+        element.setBackgroundColor(Color.TRANSPARENT)
         val pivotButton: Button = findViewById(R.id.pivotButton)
         pivotButton.text = getString(R.string.showPivot)
 
@@ -293,7 +293,7 @@ class MainActivity2 : AppCompatActivity() {
             for(j in equationIDs[i].indices) {
                 val box: TextView = findViewById(equationIDs[i][j])
                 box.text = matrix.coefficientsAsRationals[i][j].toString()
-                box.setBackgroundResource(Color.TRANSPARENT)
+                box.setBackgroundColor(Color.TRANSPARENT)
             }
         }
 
